@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro Clock</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h2>Pomodoro Clock</h2>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-sm-4 counter">
+				<h4>Break Time</h4>
+				<div class="btn-group">
+					<button class="btn btn-default btn-lg" onclick="decrementBreakTime()">-</button>
+					<button class="btn btn-lg" id="breakTimer">5</button>
+					<button class="btn btn-default btn-lg" onclick="incrementBreakTime()">+</button>
+				</div>
+			</div>
+			<div class="col-sm-4 counter">
+				<button class="btn btn-default" onclick="reset()">Reset</button>
+			</div>
+			<div class="col-sm-4 counter">
+				<h4>Work Time</h4>
+				<div class="btn-group">
+					<button class="btn btn-default btn-lg" onclick="decrementWorkTime()">-</button>
+					<button id="workTimer" class="btn btn-lg">25</button>
+					<button class="btn btn-default btn-lg" onclick="incrementWorkTime()">+</button>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-xs-12">
+				<div class="clock" onclick="count(workTime, seconds)">
+					<div class="timer">
+						<h2 id="session">Work Time</h2>
+						<h3 id="time">25:00</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
